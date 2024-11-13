@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Button, CustomButton } from "./component/Button";
+import { CustomInput } from "./component/Input";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="m-5">
+      <CustomButton
+        title={"click here"}
+        variant="primary"
+        onClick={() => console.log("event")}
+      ></CustomButton>
+
+      <CustomInput
+        label="name"
+        placeholder="this is used to show name placeholder"
+        className="w-50"
+      ></CustomInput>
     </div>
   );
 }
